@@ -1,0 +1,12 @@
+{
+  "name": "test-just-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "just-rest": "latest"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}
