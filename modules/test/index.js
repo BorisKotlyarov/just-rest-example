@@ -11,8 +11,13 @@ module.exports = {
     //Example post request
     POST : {
         '/test': async function(request, response){
-            let body = await request.body;
-            response.resp(body);
+            try {
+                let body = await request.body;
+                response.resp(body);
+            } catch (error){
+                //body is not JSON
+                response.error(400, error.message);
+            }
         }
     }
 };
