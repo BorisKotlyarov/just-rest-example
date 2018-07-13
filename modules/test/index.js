@@ -16,7 +16,7 @@ module.exports = {
                 response.resp(body);
             } catch (error){
                 //body is not JSON
-                response.error(400, error.message);
+                response.error(400, error);
             }
         }
     }

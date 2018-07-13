@@ -3,7 +3,7 @@ module.exports = {
         '/': function(request, response){
 
             let responseData = {
-                information: 'this is response string'
+                information: 'this is response JSON'
             };
 
             response.resp(responseData);

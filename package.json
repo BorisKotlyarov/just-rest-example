@@ -1,12 +1,12 @@
 {
   "name": "test-just-rest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "server.js",
   "dependencies": {
     "just-rest": "latest"
   },
   "scripts": {},
-  "author": "",
+  "author": "Boris Kotlyarov",
   "license": "ISC"
 }
