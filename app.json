@@ -1,0 +1,6 @@
+{
+    "name": "Just-REST Sample",
+    "description": "A sample app using Just-REST",
+    "repository": "https://github.com/BorisKotlyarov/just-rest-example",
+    "keywords": ["rest", "json"]
+}

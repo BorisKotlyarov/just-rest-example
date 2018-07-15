@@ -1,12 +1,25 @@
 {
   "name": "test-just-rest",
   "version": "1.0.1",
-  "description": "",
+  "description": "A sample app using Just-REST",
   "main": "server.js",
   "dependencies": {
     "just-rest": "latest"
   },
-  "scripts": {},
+  "engines": {
+    "node": "8.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BorisKotlyarov/just-rest-example"
+  },
+  "keywords": [
+    "rest",
+    "json"
+  ],
+  "scripts": {
+    "start": "node server.js"
+  },
   "author": "Boris Kotlyarov",
-  "license": "ISC"
+  "license": "MIT"
 }
