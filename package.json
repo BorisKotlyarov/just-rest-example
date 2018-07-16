@@ -4,7 +4,8 @@
   "description": "A sample app using Just-REST",
   "main": "server.js",
   "dependencies": {
-    "just-rest": "latest"
+    "just-rest": "latest",
+    "just-rest-cookies": "latest"
   },
   "engines": {
     "node": "8.11.2"
