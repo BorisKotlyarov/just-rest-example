@@ -1,6 +1,6 @@
 module.exports = {
     GET: {
-        '/': function(request, response){
+        '/': function (request, response) {
 
             let responseData = {
                 information: 'this is response JSON'
