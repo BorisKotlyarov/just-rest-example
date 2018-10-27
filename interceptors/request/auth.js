@@ -1,3 +1,5 @@
+const {Errors} = require('just-rest');
+
 module.exports = {
 
     ANY: {
@@ -33,6 +35,20 @@ module.exports = {
             if (request.headers.token && testDatabase.hasOwnProperty(request.headers.token)) {
                 instance.user = testDatabase[request.headers.token];
             }
+
+            /*
+                Example middleware making.
+                See usage in file "{__PROJECT_DIR__}/modules/profile/index.js"
+            */
+            this.checkAuth = ()=>{
+                if (!instance.user.isAuthorized) {
+                    throw  new Errors(401)
+                }
+
+                if (!instance.user.permissions.includes('read.me') && !instance.user.permissions.includes('all')) {
+                    throw  new Errors(403)
+                }
+            };
 
             return;
         }

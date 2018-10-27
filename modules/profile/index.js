@@ -1,4 +1,4 @@
-const {Errors} = require('just-rest');
+
 
 module.exports = {
 
@@ -6,13 +6,12 @@ module.exports = {
     GET: {
         '/profile/me': function (request, response, matched) {
             //use http://localhost:3002/profile/me
-            if (!this.user.isAuthorized) {
-                throw  new Errors(401)
-            }
 
-            if (!this.user.permissions.includes('read.me') && !this.user.permissions.includes('all')) {
-                throw  new Errors(403)
-            }
+            /*
+                Using middleware.
+                Make middleware see file "{__PROJECT_DIR__}/interceptors/request/auth.js"
+            */
+            this.checkAuth();
 
             response.resp(this.user);
         }
