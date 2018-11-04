@@ -11,6 +11,7 @@ function user(request, response, match){
         isAuthorized: false
     };
 
+    //Emulate database
     let testDatabase = {
         'token1': {
             username: 'Boris',
@@ -33,7 +34,7 @@ function user(request, response, match){
         instance.user = testDatabase[request.headers.token];
     }
 
-    return;
+    return; //is required for every middleware
 }
 
 function isAuthorized() {
